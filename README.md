@@ -1,120 +1,60 @@
-# LoanApp
+# 🏠 LoanApp
 
-Home Loan Application - end to end, using Spring Boot, Hibernate and Oracle DB
+A **Home Loan Application** built using **Spring Boot**, **Hibernate**, and **Oracle Database** to manage home loan processes end-to-end.
 
-## File Structure
 
-```code
-LoanApp ⋈
-┣➝.mvn
-┃   ┗➝wrapper
-┃       ┣➝MavenWrapperDownloader.java
-┃       ┣➝maven-wrapper.jar
-┃       ┗➝maven-wrapper.properties
-┣➝.settings
-┃   ┣➝org.eclipse.core.resources.prefs
-┃   ┣➝org.eclipse.jdt.apt.core.prefs
-┃   ┣➝org.eclipse.jdt.core.prefs
-┃   ┗➝org.eclipse.m2e.core.prefs
-┣➝src
-┃   ┗➝main
-┃       ┣➝java
-┃       ┃   ┗➝com
-┃       ┃       ┗➝lti
-┃       ┃           ┗➝homeloan
-┃       ┃               ┣➝controller
-┃       ┃               ┃   ┣➝AdminController.java
-┃       ┃               ┃   ┣➝CustomerController.java
-┃       ┃               ┃   ┣➝EmiCalculatorController.java
-┃       ┃               ┃   ┣➝IncomeController.java
-┃       ┃               ┃   ┣➝LoanController.java
-┃       ┃               ┃   ┣➝LoginController.java
-┃       ┃               ┃   ┣➝MultipleUploadController.java
-┃       ┃               ┃   ┗➝TrackerController.java
-┃       ┃               ┣➝dao
-┃       ┃               ┃   ┣➝IAdminDao.java
-┃       ┃               ┃   ┣➝AdminDao.java
-┃       ┃               ┃   ┣➝ICustPropertyAndIncomeDao.java
-┃       ┃               ┃   ┣➝CustPropertyAndIncomeDao.java
-┃       ┃               ┃   ┣➝ICustomerDao.java
-┃       ┃               ┃   ┣➝CustomerDao.java
-┃       ┃               ┃   ┣➝IDocumentDao.java
-┃       ┃               ┃   ┣➝DocumentDao.java
-┃       ┃               ┃   ┣➝ILoanDao.java
-┃       ┃               ┃   ┣➝LoanDao.java
-┃       ┃               ┃   ┣➝ILoginDao.java
-┃       ┃               ┃   ┣➝LoginDao.java
-┃       ┃               ┃   ┣➝ITrackerDao.java
-┃       ┃               ┃   ┗➝TrackerDao.java
-┃       ┃               ┣➝exception
-┃       ┃               ┃   ┣➝AdminException.java
-┃       ┃               ┃   ┣➝CalculatorException.java
-┃       ┃               ┃   ┣➝CustomException.java
-┃       ┃               ┃   ┣➝ExceptionControllerAdvice.java
-┃       ┃               ┃   ┣➝FileStorageException.java
-┃       ┃               ┃   ┣➝LoanException.java
-┃       ┃               ┃   ┗➝LoginException.java
-┃       ┃               ┣➝model
-┃       ┃               ┃   ┣➝Customer.java
-┃       ┃               ┃   ┣➝Document.java
-┃       ┃               ┃   ┣➝EligibiltyCalculator.java
-┃       ┃               ┃   ┣➝EmiCalculator.java
-┃       ┃               ┃   ┣➝Loan.java
-┃       ┃               ┃   ┣➝Login.java
-┃       ┃               ┃   ┣➝PropertyAndIncome.java
-┃       ┃               ┃   ┗➝Tracker.java
-┃       ┃               ┣➝service
-┃       ┃               ┃   ┣➝IAdminService.java
-┃       ┃               ┃   ┣➝AdminService.java
-┃       ┃               ┃   ┣➝ICustPropertyAndIncomeService.java
-┃       ┃               ┃   ┣➝CustPropertyAndIncomeService.java
-┃       ┃               ┃   ┣➝ICustomerService.java
-┃       ┃               ┃   ┣➝CustomerService.java
-┃       ┃               ┃   ┣➝IDocumentService.java
-┃       ┃               ┃   ┣➝DocumentService.java
-┃       ┃               ┃   ┣➝IEligibilityCalculatorService.java
-┃       ┃               ┃   ┣➝EligibilityCalculatorService.java
-┃       ┃               ┃   ┣➝IEmiCalculatorService.java
-┃       ┃               ┃   ┣➝EmiCalculatorService.java
-┃       ┃               ┃   ┣➝ILoanService.java
-┃       ┃               ┃   ┣➝LoanService.java
-┃       ┃               ┃   ┣➝ILoginService.java
-┃       ┃               ┃   ┣➝LoginService.java
-┃       ┃               ┃   ┣➝ITrackerService.java
-┃       ┃               ┃   ┗➝TrackerService.java
-┃       ┃               ┣➝Application.java
-┃       ┃               ┗➝ServletInitializer.java
-┃       ┣➝resources
-┃       ┃   ┣➝static
-┃       ┃   ┃   ┣➝assets
-┃       ┃   ┃   ┃   ┣➝
-┃       ┃   ┃   ┃   ┣➝
-┃       ┃   ┃   ┣➝css
-┃       ┃   ┃   ┗➝js
-┃       ┃   ┗➝application.properties
-┃       ┗➝webapp
-┃           ┗➝WEB-INF
-┃               ┗➝views
-┃
-┣➝target (*compiled files*)
-┣➝.classpath
-┣➝.project
-┣➝LICENSE
-┣➝README.md
-┣➝mvnw
-┣➝mvnw.cmd
-┣➝pom.xml
-┗➝db.sql
+## ✨ **Overview**
 
+**LoanApp** streamlines the home loan lifecycle by providing:
+
+* Customer registration and login
+* Loan application submission and tracking
+* EMI and eligibility calculators
+* Document uploads and management
+* Admin approvals and loan management
+
+---
+
+## 🚀 **Tech Stack**
+
+* **Backend:** Spring Boot, Hibernate
+* **Database:** Oracle DB
+* **Build Tool:** Maven
+* **Version Control:** Git
+
+---
+
+## 🔧 **Key Features**
+
+✅ Customer and Admin modules
+✅ EMI & Eligibility calculations
+✅ Document upload with exception handling
+✅ RESTful APIs integrated with JSP views
+✅ Layered architecture for maintainability
+
+---
+
+---
+
+## 📜 **License**
+
+Licensed under the **Eclipse Public License 2.0 (EPL-2.0)**.
+
+---
+
+## 💡 **Getting Started**
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/2200032645/LoanManager.git
+cd LoanManager
 ```
 
-## Contributors
+2. **Configure Oracle DB credentials** in `application.properties`.
 
-- Shreya Rastogi
-- Shiwangi Singh
-- Aastha Sehgal
-- Sahil Hustu
-- [Abhinav Sharma](https://github.com/ABSphreak)
+3. **Run the application**
 
-## License
-LIcensed under EPL-2.0
+```bash
+mvn spring-boot:run
+```
